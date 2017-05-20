@@ -14,9 +14,7 @@ constructor(props){
         }
 
         componentWillMount(){
-          console.log("Will: "+this.props.time);
           this.setState({time:this.props.time});
-          console.log("Will: "+this.state.time);
         }
 
         componentDidMount(){

@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import TopToolbar from './TopToolbar'
+import Tasks from './Tasks';
 import './App.css';
 
 class App extends Component {
@@ -19,8 +20,8 @@ class App extends Component {
       <div>
         <div>
           <TopToolbar />
+          <Tasks />
         </div>
-        <div className="App-title">My TimeMaster</div>
         <div className="App" />
       </div>
     )
