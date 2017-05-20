@@ -6,11 +6,13 @@ constructor(props){
           super(props);
           this.state= {
             taskInTextField:"",
+            options: [{value: 'HA'}, {value: 'SE'}]
           }
         }
 
         addTask()
         {
+          this.setState({options: this.state.options.concat({value:this.state.taskInTextField})});
           console.log("event: " + this.state.taskInTextField);
         }
 
@@ -18,10 +20,12 @@ constructor(props){
         {
           return(
             <div className="Tasks">Tasks
-            <FormControl componentClass="select" placeholder="select" id="TaskSelect">
-            <option value="select">select</option>
-            <option value="other">...</option>
-          </FormControl>
+              <FormControl componentClass="select" placeholder="Type">
+                {this.state.options.map((option,index) => {
+                  return (<option key={index} value={option.value}>{option.value}</option>)
+                })
+              }
+              </FormControl>
           <div>
              <Glyphicon glyph="plus" onClick={() => this.addTask()}/>
              <Glyphicon glyph="minus"/>
