@@ -31,7 +31,6 @@ constructor(props){
                   <NavItem eventKey={1} href="#">Menu</NavItem>
                   <NavItem eventKey={2} href="#">User</NavItem>
                   <NavItem eventKey={2} href="#">Projekte</NavItem>
-                  <NavItem eventKey={2} href="#">User</NavItem>
                   <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                     <MenuItem eventKey={3.1}>Action</MenuItem>
                     <MenuItem eventKey={3.2}>Another action</MenuItem>
