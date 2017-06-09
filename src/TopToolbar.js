@@ -19,15 +19,7 @@ class TopToolbar extends Component {
     };
   }
 
-  track() {
-    if (this.state.timerRuns) {
-      this.setState({ timerRuns: false });
-    } else {
-      this.setState({ timerRuns: true });
-    }
-
-    console.log("Works");
-  }
+  
 
   render() {
     console.log("RUNS:", this.state.timerRuns);
