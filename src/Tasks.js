@@ -4,16 +4,16 @@ import {FormControl,Glyphicon} from 'react-bootstrap';
 class Tasks extends Component{
 constructor(props){
           super(props);
-          this.state= {
-            taskInTextField:"",
+          this.state ={
             options: [{value: 'HA'}, {value: 'SE'}]
           }
-        }
+            
+          }
 
         addTask()
         {
-          this.setState({options: this.state.options.concat({value:this.state.taskInTextField})});
-          console.log("event: " + this.state.taskInTextField);
+          this.setState({options: this.state.options.concat({value:this.state.selectedTask})});
+          console.log("event: " + this.state.selectedTask);
         }
 
         render()
@@ -34,11 +34,11 @@ constructor(props){
                type="text"
                value={this.state.value}
                placeholder="Enter Task"
-               onChange={event => this.setState({taskInTextField: event.target.value})}
+               onChange={event => this.setState({selectedTask: event.target.value})}
              />
             </div>
           </div>
-          )
+          );
         }
       }
 
